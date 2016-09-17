@@ -19,11 +19,11 @@ SOFTWARE USED:
 -Custom Windows Software (Batch files)
 --‘Setup.bat’ : Creates all the needed folders and files to run the automated service.
 --‘Flatfield.bat’ : Creates the flat field tiff image from a source raw file needed to apply flatfield/vignette removal.
---‘Hotfolder.bat’ : monitors source folder for new RAW images. For each new unedited raw image convert and save ‘.tiff’ file.   
+--‘jacRabbit.bat’ : monitors source folder for new RAW images. For each new unedited raw image convert and save ‘.tiff’ file.   
 
-Hotfolder batch file completes the following list of actions:
+jacRabbit batch file completes the following list of actions:
 ---user input for raw type, file name, dpi, and other info
----continuously checks for new raw images in source hotfolder
+---continuously checks for new raw images in source folder
 ---locate black edge for auto rotation
 ---apply flatfield correction
 ---set density (dpi)  
