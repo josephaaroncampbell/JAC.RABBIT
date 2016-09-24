@@ -25,7 +25,7 @@ IF %emul%==yes (
   rem ask user for input of raw file type
   SET /P rawFormat=Please type the RAW FORMAT of your camera (letters only ex: cr2, nef, orf...)  and then press ENTER:
 
-  rem ask user for input of raw file type
+  rem ask user for input of FlatField file type
   SET /P vExt=Please type the FILE FORMAT of your vignette removal image file(letters only ex: cr2, tif, dng...)  and then press ENTER:
 
   rem ask user for input of dpi
@@ -34,10 +34,10 @@ IF %emul%==yes (
   rem ask user for input of white level limit. 
   SET /P white=Please type the desired WHITE level limit percent number (0-100: 0 whites are black, at 100 there is no limit) and then press ENTER:
 
-  rem ask user for input of white level limit. 
+  rem ask user for input of Black level limit. 
   SET /P black=Please type the desired BLACK level limit percent number (0-100: 0 blacks are black, at 100 blacks are white) and then press ENTER:
 
-  rem ask user for input of black level limit. 
+  rem ask user for input of Gamma value. 
   SET /P gamma=Please type the desired GAMMA level number (ex: 1.0, 1.8. 2.2) and then press ENTER:
 
   rem ask user for input of sequential naming prefix
