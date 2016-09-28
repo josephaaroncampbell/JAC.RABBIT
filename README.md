@@ -65,7 +65,7 @@ b. ‘Flatfield.bat’ : Creates the flat field tiff image from a source raw fil
 1.	Create a master working folder where new image files will be saved by the tether software.
 2.	Copy the ‘Setup.bat’, ‘flatfield.bat’, and ‘hotfolder.bat’ files into the master working folder. These are windows batch files and look as the following:
  
-![Alt text](/readMeGRFX/batchIcons.png?raw=true "Black Strip Horizontal")
+![Alt text](/readMeGRFX/batchIcons.png?raw=true =200x  "Black Strip Horizontal")
 
 3.	Double click on ‘Setup.bat’. This will create all necessary subfolders and files needed to process the images produced during photography. This will include:
 1.	Three empty folders : ‘Source’, ‘Raw’, and ‘Output’
