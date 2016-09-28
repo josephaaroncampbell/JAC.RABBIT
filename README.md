@@ -1,10 +1,10 @@
 #JAC.RABBIT#
 
->A rapid digitization workflow utilizing windows command language, ImageMagick, and Exiftool. This workflow was created in response to a massive digitization project of Nitrate Negatives and the lack of needed equipment and standard commercial software designed for rapid capture photography. It is designed to be open source and for Museums or Cultural Heritage institutions that do not have the resources to produce or purchase a state of the art digitization system.
->
->This is done through a windows batch file that continuously checks for new RAW images in a specific folder. The code is windows command language , ImageMagick, and Exiftool parsed through the command line. After proper setup when your camera sends a new raw image to a source or ‘hot folder’ it will first determine the auto rotation anchor by checking each image frame edge to see if it contains a black edge. This process is described in 'ReadMe - Using the Auto Rotate Function'. 
->
->Then the software will convert the raw image and output a ‘.tif’ file. During this conversion the file is inverted, auto rotated, converted to grayscale, the black edge is removed, vignette/flatfield corrections are applied, and  saved with a unique serialized file name based off of user input. Finally, the original raw image file name is stored in the keyword field of the new tiff image using ExifTool.
+A rapid digitization workflow utilizing windows command language, ImageMagick, and Exiftool. This workflow was created in response to a massive digitization project of Nitrate Negatives and the lack of needed equipment and standard commercial software designed for rapid capture photography. It is designed to be open source and for Museums or Cultural Heritage institutions that do not have the resources to produce or purchase a state of the art digitization system.
+
+This is done through a windows batch file that continuously checks for new RAW images in a specific folder. The code is windows command language , ImageMagick, and Exiftool parsed through the command line. After proper setup when your camera sends a new raw image to a source or ‘hot folder’ it will first determine the auto rotation anchor by checking each image frame edge to see if it contains a black edge. This process is described in 'ReadMe - Using the Auto Rotate Function'. 
+
+Then the software will convert the raw image and output a ‘.tif’ file. During this conversion the file is inverted, auto rotated, converted to grayscale, the black edge is removed, vignette/flatfield corrections are applied, and  saved with a unique serialized file name based off of user input. Finally, the original raw image file name is stored in the keyword field of the new tiff image using ExifTool.
 
 
 ### EQUIPMENT USED:
@@ -39,9 +39,9 @@ b. ‘Flatfield.bat’ : Creates the flat field tiff image from a source raw fil
  13. moves edited raw images to backup raw folder  
  14. moves created tiff images to separate output folder  
 4. ImageMagick : handles all raw image manipulation and conversion. Its raw engine is dcRaw.  
-     i. http://www.imagemagick.org/script/index.php  
+     i. <http://www.imagemagick.org/script/index.php> 
 5. Exiftool : extracts and embeds metadata  
-     i. http://www.sno.phy.queensu.ca/~phil/exiftool/  
+     i. <http://www.sno.phy.queensu.ca/~phil/exiftool/> 
 
 ### SETUP PHYSICAL WORKSPACE:  
 1. Work area should be clean of dirt, grime, or other unwanted elements  
@@ -59,4 +59,22 @@ b. ‘Flatfield.bat’ : Creates the flat field tiff image from a source raw fil
 
 
 
-![Alt text](/readMeGRFX/BlackHorizontal.png?raw=true "Black Strip Horizontal")
+##SETUP DIGITAL WORKSPACE
+
+1.	Once the camera and computer are connected:
+1.	Create a master working folder where new image files will be saved by the tether software.
+2.	Copy the ‘Setup.bat’, ‘flatfield.bat’, and ‘hotfolder.bat’ files into the master working folder. These are windows batch files and look as the following:
+ 
+![Alt text](/readMeGRFX/batchIcons.png?raw=true "Black Strip Horizontal")
+
+3.	Double click on ‘Setup.bat’. This will create all necessary subfolders and files needed to process the images produced during photography. This will include:
+1.	Three empty folders : ‘Source’, ‘Raw’, and ‘Output’
+2.	Empty Text files: ‘Source’ and ‘Output’
+4.	Copy or place a ‘target.tif’ file into the ‘Source’ folder. This is used to create the target reference that’s added to the final ‘.tiff’ file if requested. Ours looks like this: 
+
+ 
+CHM color reference/scale image
+5.	Open tether software:
+1.	Canon : ‘Digital Photo Professional 4 (DPP)’ and EOS Utility
+
+![Alt text](/readMeGRFX/DPP4.png?raw=true "Canon Digital Photo Professional 4")![Alt text](/readMeGRFX/CanonEOSUtil.png?raw=true "Canon EOS Utility")
