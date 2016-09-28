@@ -22,23 +22,22 @@
 1. Canon EOS Utility    
 2. Canon Digital Photo Professional 4    
 3. Custom Windows Software (Batch files)    
- a. ‘Setup.bat’ : Creates all the needed folders and files to run the automated service.    
- b. ‘Flatfield.bat’ : Creates the flat field tiff image from a source raw file needed to apply flatfield/vignette removal  
- c. ‘jacRabbit.bat’ : monitors source folder for new RAW images. Completes the following actions for each RAW image:  
-      1.   user input for raw type, file name, dpi, and other info  
-      2.  continuously checks for new raw images in source hot folder  
-      3. locate black edge for auto rotation  
-      4.  apply flatfield correction  
-      5.   set density (dpi)    
-      6.  8 bit depth  
-      7. set colorspace to grayscale  
-      8. invert from positive to negative   
-      9.  remove black edge pixels  
-      10.   rotate image based on which edge is black.  
-      11.  convert to tiff with unique file name  
-      12. embeds original raw file name into new tiff image  
-      13. moves edited raw images to backup raw folder  
-      14. moves created tiff images to separate output folder  
+a. ‘Setup.bat’ : Creates all the needed folders and files to run the automated service.    
+b. ‘Flatfield.bat’ : Creates the flat field tiff image from a source raw file needed to apply flatfield/vignette removal  c. ‘jacRabbit.bat’ : monitors source folder for new RAW images. Completes the following actions for each RAW image:  
+ 1. user input for raw type, file name, dpi, and other info  
+ 2. continuously checks for new raw images in source hot folder  
+ 3. locate black edge for auto rotation  
+ 4. apply flatfield correction  
+ 5. set density (dpi)    
+ 6. 8 bit depth  
+ 7. set colorspace to grayscale  
+ 8. invert from positive to negative   
+ 9. remove black edge pixels  
+ 10. rotate image based on which edge is black.  
+ 11. onvert to tiff with unique file name  
+ 12. embeds original raw file name into new tiff image  
+ 13. moves edited raw images to backup raw folder  
+ 14. moves created tiff images to separate output folder  
 4. ImageMagick : handles all raw image manipulation and conversion. Its raw engine is dcRaw.  
      i. http://www.imagemagick.org/script/index.php  
 5. Exiftool : extracts and embeds metadata  
