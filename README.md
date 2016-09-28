@@ -25,20 +25,20 @@ SOFTWARE USED:
  a. ‘Setup.bat’ : Creates all the needed folders and files to run the automated service.    
  b. ‘Flatfield.bat’ : Creates the flat field tiff image from a source raw file needed to apply flatfield/vignette removal  
  c. ‘jacRabbit.bat’ : monitors source folder for new RAW images. Completes the following actions for each RAW image:  
-     i.   user input for raw type, file name, dpi, and other info  
-     ii.  continuously checks for new raw images in source hot folder  
-     iii. locate black edge for auto rotation  
-     iv.  apply flatfield correction  
-     v.   set density (dpi)    
-     vi.  8 bit depth  
-     vii. set colorspace to grayscale  
-     viii. invert from positive to negative   
-     ix.  remove black edge pixels  
-     x.   rotate image based on which edge is black.  
-     xi.  convert to tiff with unique file name  
-     xii. embeds original raw file name into new tiff image  
-     xiii. moves edited raw images to backup raw folder  
-     xiv. moves created tiff images to separate output folder  
+      i.   user input for raw type, file name, dpi, and other info  
+      ii.  continuously checks for new raw images in source hot folder  
+      iii. locate black edge for auto rotation  
+      iv.  apply flatfield correction  
+      v.   set density (dpi)    
+      vi.  8 bit depth  
+      vii. set colorspace to grayscale  
+      viii. invert from positive to negative   
+      ix.  remove black edge pixels  
+      x.   rotate image based on which edge is black.  
+      xi.  convert to tiff with unique file name  
+      xii. embeds original raw file name into new tiff image  
+      xiii. moves edited raw images to backup raw folder  
+      xiv. moves created tiff images to separate output folder  
 4. ImageMagick : handles all raw image manipulation and conversion. Its raw engine is dcRaw.  
      i. http://www.imagemagick.org/script/index.php  
 5. Exiftool : extracts and embeds metadata  
