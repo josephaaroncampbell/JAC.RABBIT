@@ -16,28 +16,29 @@ EQUIPMENT USED:
 -Two 6in x 2in Black Matte Board Pieces ( size will vary based on size of object to be digitized)
 
 SOFTWARE USED:
--Canon EOS Utility
--Canon Digital Photo Professional 4
--Custom Windows Software (Batch files)
---‘Setup.bat’ : Creates all the needed support folders and files to run the automated service.
---‘Flatfield.bat’ : Creates the flat field tiff image from a source raw file needed to apply flatfield/vignette removal.
---‘jacRabbit.bat’ : monitors source folder for new RAW images. For each new unedited raw image convert and save ‘.tiff’ file.   
+1.	Canon EOS Utility
+2.	Canon Digital Photo Professional 4
+3.	Custom Windows Software (Batch files)
+a.	‘Setup.bat’ : Creates all the needed folders and files to run the automated service.
+b.	‘Flatfield.bat’ : Creates the flat field tiff image from a source raw file needed to apply flatfield/vignette removal
+c.	‘jacRabbit.bat’ : monitors source folder for new RAW images. For each new unedited raw image convert and save ‘.tiff’ file. The hot folder batch file completes the following list of actions:
+  i.	 user input for raw type, file name, dpi, and other info
+  ii.  continuously checks for new raw images in source hot folder
+  iii. locate black edge for auto rotation
+  iv.	 apply flatfield correction
+  v.	 set density (dpi)  
+  vi.	 8 bit depth
+  vii. set colorspace to grayscale
+  viii. invert from positive to negative 
+  ix.	 remove black edge pixels
+  x.	 rotate image based on which edge is black.
+  xi.	 convert to tiff with unique file name
+  xii. embeds original raw file name into new tiff image
+  xiii. moves edited raw images to backup raw folder
+  xiv.	moves created tiff images to separate output folder
+4.	ImageMagick : handles all raw image manipulation and conversion. Its raw engine is dcRaw.
+5.	Exiftool : extracts and embeds metadata
 
-jacRabbit batch file completes the following list of actions:
----user input for raw type, file name, dpi, and other info
----continuously checks for new raw images in source folder
----locate black edge for auto rotation
----apply flatfield correction
----set density (dpi)  
----8 bit depth
----set colorspace to grayscale
----invert from positive to negative 
----remove black edge pixels
----rotate image based on which edge is black.
----convert to tiff with unique file name
----embeds original raw file name into new tiff image
----moves edited raw images to backup raw folder
----moves created tiff images to separate output folder
 
---ImageMagick : handles all raw image manipulation and conversion. Its raw engine is dcRaw.
---Exiftool : extracts and embeds metadata
+--ImageMagick : handles all raw image manipulation and conversion. Its raw engine is dcRaw. :http://www.imagemagick.org/script/index.php
+--Exiftool : extracts and embeds metadata : http://www.sno.phy.queensu.ca/~phil/exiftool/
