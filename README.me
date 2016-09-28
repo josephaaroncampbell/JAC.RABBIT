@@ -2,14 +2,16 @@ JACRABBIT
 
 A rapid digitization workflow utilizing windows command language, ImageMagick, and Exiftool. This workflow was created in response to a massive digitization project of Nitrate Negatives and the lack of needed equipment and standard commercial software designed for rapid capture photography. It is designed to be open source and for Museums or Cultural Heritage institutions that do not have the resources to produce or purchase a state of the art digitization system.
 
-This is done through a windows batch file that continuously checks for new RAW images in a specific folder. The code is windows command language , ImageMagick, and Exiftool parsed through the command line. After proper setup when your camera sends a new raw image to a ‘hot folder’ it will first determine the auto rotation anchor by checking each image frame edge to see if it is black or not. Whichever image frame edge is black will be used as the anchor for rotating the image and will become the final images bottom edge. Then the software will convert the raw image and output a ‘.tif’ file. During this conversion the file is inverted, rotated, converted to grayscale, the black edge is removed, vignette/flatfield corrections are applied, and  saved with a unique serialized file name based off of user input. Finally, the original raw image file name is stored in the keyword field of the new tiff image using ExifTool.
+This is done through a windows batch file that continuously checks for new RAW images in a specific folder. The code is windows command language , ImageMagick, and Exiftool parsed through the command line. After proper setup when your camera sends a new raw image to a source or ‘hot folder’ it will first determine the auto rotation anchor by checking each image frame edge to see if it contains a black edge. This process is described in 'ReadMe - Using the Auto Rotate Funtion'. 
+
+Then the software will convert the raw image and output a ‘.tif’ file. During this conversion the file is inverted, auto rotated, converted to grayscale, the black edge is removed, vignette/flatfield corrections are applied, and  saved with a unique serialized file name based off of user input. Finally, the original raw image file name is stored in the keyword field of the new tiff image using ExifTool.
 
 
 EQUIPMENT USED:
 -Canon 5D MKIII with EF 50mm 1:2.5 Macro Lens
 -Manfrotto Mini Salon Camera Stand
 -Dell Alienware Laptop
--Bretford #6000 Lightbox (4ft)
+-Porta-Trace / Gagne LED Light Panel (18 x 24", Black) 
 -Generic Laptop Stand
 -Two 6in x 2in Black Matte Board Pieces ( size will vary based on size of object to be digitized)
 
@@ -17,7 +19,7 @@ SOFTWARE USED:
 -Canon EOS Utility
 -Canon Digital Photo Professional 4
 -Custom Windows Software (Batch files)
---‘Setup.bat’ : Creates all the needed folders and files to run the automated service.
+--‘Setup.bat’ : Creates all the needed support folders and files to run the automated service.
 --‘Flatfield.bat’ : Creates the flat field tiff image from a source raw file needed to apply flatfield/vignette removal.
 --‘jacRabbit.bat’ : monitors source folder for new RAW images. For each new unedited raw image convert and save ‘.tiff’ file.   
 
