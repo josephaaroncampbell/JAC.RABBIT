@@ -1,4 +1,4 @@
-#JACRABBIT#
+#JAC.RABBIT#
 
 >A rapid digitization workflow utilizing windows command language, ImageMagick, and Exiftool. This workflow was created in response to a massive digitization project of Nitrate Negatives and the lack of needed equipment and standard commercial software designed for rapid capture photography. It is designed to be open source and for Museums or Cultural Heritage institutions that do not have the resources to produce or purchase a state of the art digitization system.
 >
