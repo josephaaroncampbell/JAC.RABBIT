@@ -1,0 +1,15 @@
+jac.Rabbit Black edge auto rotation:
+
+This page describes the setup and usage of the Auto Rotation feature in the jacRabbit.bat workflow.
+
+SETUP:
+
+A typical setup will include the camera positioned above a LED light table with some transparent photographic medium placed on and illuminated by the light table. The camera is tethered to a computer/laptop that can run windows batch files and utilizes tether software to deliver raw image captures to a source folder. The batch file will take over from there.
+
+To use the auto rotation feature the user must supply at least one black, non-relfective strip of board similar to a conventional ruler. This black strip of material will be placed adjacent and parallel to the photographic media being digitized on the side considered the bottom or base of the correct orientation. For example, if the subject matter is a horizontal landscape then the black strip will be positioned on the edge that aligns with the ground of the landscape, opposite of the sky. 
+
+The black strip only needs to occupy roughly 10 pixels of the appropriate image edge to ensure functionality. 
+
+PHOTOGRAPHY:
+
+During Photography the user needs only to move the black strip to the appropriate edge for each negative/transparancy and the software will find the edge, rotate the image making that edge the bottom edge, then crop out the black strip. Which is why it is important to avoid putting too much of the strip in the image frame. 
