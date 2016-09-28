@@ -38,43 +38,9 @@ b. ‘Flatfield.bat’ : Creates the flat field tiff image from a source raw fil
  12. embeds original raw file name into new tiff image  
  13. moves edited raw images to backup raw folder  
  14. moves created tiff images to separate output folder  
-4. ImageMagick : handles all raw image manipulation and conversion. Its raw engine is dcRaw.  
+4. _ImageMagick_ : handles all raw image manipulation and conversion. Its raw engine is dcRaw.  
      i. <http://www.imagemagick.org/script/index.php> 
-5. Exiftool : extracts and embeds metadata  
+5. _Exiftool_ : extracts and embeds metadata  
      i. <http://www.sno.phy.queensu.ca/~phil/exiftool/> 
 
-### SETUP PHYSICAL WORKSPACE:  
-1. Work area should be clean of dirt, grime, or other unwanted elements  
-2. Basic setup will consist of object, object support, camera, camera stand, laptop, tether software, and a  light table/box  
-3. Place the camera on the camera stand or tripod  
-4. Using a pitch finder or level, measure the angles parallel between the camera lens and object surface (do not measure on the actual object, measure the table to whatever is supporting the object). Make sure the camera lens matches the angle of the light table/box.  
-5. Place laptop nearby on stand or other support surface  
-6. Power on both the camera and the laptop  
-7. On the camera:  
-1. turn off any special white balance  
-2. turn off timers and ensure the camera is on ‘single shutter’ mode  
-3. turn on AutoFocus for the lens if applicable, otherwise use manual focus  
-8. Connect the camera to the usb cable  
-9. Connect the opposite end of the usb cable to the computer  
 
-
-
-##SETUP DIGITAL WORKSPACE
-
-1.	Once the camera and computer are connected:
-1.	Create a master working folder where new image files will be saved by the tether software.
-2.	Copy the ‘Setup.bat’, ‘flatfield.bat’, and ‘hotfolder.bat’ files into the master working folder. These are windows batch files and look as the following:
- 
-![Alt text](/readMeGRFX/batchIcons.png?raw=true =200x  "Black Strip Horizontal")
-
-3.	Double click on ‘Setup.bat’. This will create all necessary subfolders and files needed to process the images produced during photography. This will include:
-1.	Three empty folders : ‘Source’, ‘Raw’, and ‘Output’
-2.	Empty Text files: ‘Source’ and ‘Output’
-4.	Copy or place a ‘target.tif’ file into the ‘Source’ folder. This is used to create the target reference that’s added to the final ‘.tiff’ file if requested. Ours looks like this: 
-
- 
-CHM color reference/scale image
-5.	Open tether software:
-1.	Canon : ‘Digital Photo Professional 4 (DPP)’ and EOS Utility
-
-![Alt text](/readMeGRFX/DPP4.png?raw=true "Canon Digital Photo Professional 4")![Alt text](/readMeGRFX/CanonEOSUtil.png?raw=true "Canon EOS Utility")
