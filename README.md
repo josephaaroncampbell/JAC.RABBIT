@@ -18,6 +18,7 @@ EQUIPMENT USED:
 
 
 SOFTWARE USED:  
+
 1. Canon EOS Utility    
 2. Canon Digital Photo Professional 4    
 3. Custom Windows Software (Batch files)    
